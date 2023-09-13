@@ -17,36 +17,36 @@ This piece of info is a bit irrelevant for this project since the built was done
 
 1. Clone the U-Boot repository. Make sure to clone it where you want to use it.
    
-   ``
+   ```
    git clone git@github.com:u-boot/u-boot.git
-   ``
+   ```
 
    
 2. Open the cloned repository folder and make sure you are operating on the latest branch.
 
-   ``
+   ```
    cd u-boot
    git checkout u-boot-2023.07.y
-   ``
+   ```
 
 3. For Raspberry Pi 4, I want to build a 64-bit system. So, I will choose the configuration file named `rpi_arm64_defconfig`. It already supports the device tree binary of RPi4's chipset (BCM2711). Make sure to set both the architecture as `arm` and the cross compiler as `aarch64-rpi4-linux-gnu-`: the crosstool-NG toolchain I created in my previous project.
 
-   ``
+   ```
    make rpi_arm64_defconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
-   ``
+   ```
 
 4. You can access U-Boot's `menuconfig` before building your bootloader to adjust settings on a deeper level. I left it as it is but changed the bootloader's command prompt to "Our-Boot" just for the memes.
 
-   ``
+   ```
    make menuconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
-   ``
+   ```
    *insert menuconfig screenshots*
 
 5. Now, the build process is ready. Simply run the following command:
 
-   ``
+   ```
    make ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
-   ``
+   ```
 
 
 The process took less than a minute. It generated the following files:
@@ -58,9 +58,9 @@ The process took less than a minute. It generated the following files:
 
 The only file that concerns us is `u-boot.bin`. Simply copy this file to "boot" partition in your sd card.
 
-  ``
+  ```
   cp u-boot.bin /media/boot
-  ``
+  ```
 
 ### Note
 Keep in mind that the bootloader generated here cannot be tested alone. Multiple boot files are needed and will be generated in the next project: ![Linux_Kernel_Built_For_RPi4](https://github.com/AhmedAlyEl-Ghannam/Linux_Kernel_Built_For_RPi4). Feel free to visit it for more info. I will add a detailed readme file to it once it is fully complete.
