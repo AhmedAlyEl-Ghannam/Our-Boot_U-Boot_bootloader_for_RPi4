@@ -63,7 +63,7 @@ The only file that concerns us is `u-boot.bin`. Simply copy this file to "boot" 
   ```
 
 ### Note
-Keep in mind that the bootloader generated here cannot be tested alone. Multiple boot files are needed and will be generated in the next project: ![Linux_Kernel_Built_For_RPi4](https://github.com/AhmedAlyEl-Ghannam/Linux_Kernel_Built_For_RPi4). Feel free to visit it for more info. I will add a detailed readme file to it once it is fully complete.
+Keep in mind that the bootloader generated here cannot be tested alone. Multiple boot files are needed and will be generated in the next project: [Linux_Kernel_Built_For_RPi4](https://github.com/AhmedAlyEl-Ghannam/Linux_Kernel_Built_For_RPi4). Feel free to visit it for more info. I will add a detailed readme file to it once it is fully complete.
    
 
    
