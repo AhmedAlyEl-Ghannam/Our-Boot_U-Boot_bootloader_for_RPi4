@@ -9,6 +9,10 @@ Notes:
        1. 16GB DDR3 RAM @2400MHz
        1. GTX 980ti (irrelevant to this project) \
 This piece of info is a bit irrelevant for this project since the built was done under a minute.
+       1. A Kingston HyperX Savage SSD.
+       
+       ![](README_Photos/drip.png)
+        
   3. The bootloader was built for Raspberry Pi 4 using a custom cross-toolchain I created in an earlier project. Feel free to visit it for more detail: [Crosstool-NG_RPi4](https://github.com/AhmedAlyEl-Ghannam/Crosstool-NG_RPi4)
   4. The source I followed is Chris Simmond's book "Mastering Embedded Linux Programming - Second Edition" chapter 3: All about Bootloaders. It is a fantastic book that I STRONGLY recommend. But, bear in mind that the instructions listed in the chapter are for Beaglebone Black. If you use any other single board computer, you are on your own. If you decide to use Raspberry Pi 4, you came to the right place comrade.
 
@@ -29,9 +33,10 @@ This piece of info is a bit irrelevant for this project since the built was done
    git checkout u-boot-2023.07.y
    ```
 
-3. For Raspberry Pi 4, I want to build a 64-bit system. So, I will choose the configuration file named `rpi_arm64_defconfig`. It already supports the device tree binary of RPi4's chipset (BCM2711). Make sure to set both the architecture as `arm` and the cross compiler as `aarch64-rpi4-linux-gnu-`: the crosstool-NG toolchain I created in my previous project.
+3. For Raspberry Pi 4, I want to build a 64-bit system. So, I will choose the configuration file named `rpi_arm64_defconfig`. It already supports the device tree binary of RPi4's chipset (BCM2711). Make sure to set both the architecture as `arm` and the cross compiler as `aarch64-rpi4-linux-gnu-`: the crosstool-NG toolchain I created in my previous project. Make sure to add it to `PATH` to proceed.
 
    ```
+   PATH=${HOME}/x-tools/aarch64-rpi4-linux-gnu/bin/:$PATH
    make rpi_arm64_defconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
    ```
 
@@ -40,7 +45,9 @@ This piece of info is a bit irrelevant for this project since the built was done
    ```
    make menuconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
    ```
-   *insert menuconfig screenshots*
+   ![](README_Photos/01.png)
+   ![](README_Photos/02.png)
+   ![](README_Photos/03.png)
 
 5. Now, the build process is ready. Simply run the following command:
 
@@ -51,7 +58,7 @@ This piece of info is a bit irrelevant for this project since the built was done
 
 The process took less than a minute. It generated the following files:
 
-  *insert list of generated files*
+  ![](README_Photos/04.png)
 
 Keep in mind that the generated files differ from on board configuration to another. For example, a U-Boot generated for Beaglebone Black produces a file named MLO that is unique for TI's hardware.
 
