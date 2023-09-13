@@ -22,7 +22,7 @@ This piece of info is a bit irrelevant for this project since the built was done
    ```
 
    
-2. Open the cloned repository folder and make sure you are operating on the latest branch.
+2. Open the cloned repository folder and make sure you are operating on the latest branch. `u-boot-2023.07.y` is the latest branch as of the time of writing this README file.
 
    ```
    cd u-boot
