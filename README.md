@@ -53,6 +53,8 @@ The process took less than a minute. It generated the following files:
 
   *insert list of generated files*
 
+Keep in mind that the generated files differ from on board configuration to another. For example, a U-Boot generated for Beaglebone Black produces a file named MLO that is unique for TI's hardware.
+
 
 ## Installing Our-Boot
 
