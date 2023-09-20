@@ -40,7 +40,7 @@ This piece of info is a bit irrelevant for this project since the built was done
    make rpi_4_defconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
    ```
 
-4. You can access U-Boot's `menuconfig` before building your bootloader to adjust settings on a deeper level. I left it as it is but changed the bootloader's command prompt to "Our-Boot" just for the memes.
+4. You can access U-Boot's `menuconfig` before building your bootloader to adjust settings on a deeper level. I mostly left it as it is but changed the bootloader's command prompt to "Our-Boot" just for the memes and changed autoboot delay from 2 seconds to 5 seconds.
 
    ```
    make menuconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
@@ -48,8 +48,12 @@ This piece of info is a bit irrelevant for this project since the built was done
    ![](README_Photos/01.png)
    ![](README_Photos/02.png)
    ![](README_Photos/03.png)
+   ![](README_Photos/04.png)
+   ![](README_Photos/05.png)
+   ![](README_Photos/06.png)
+   ![](README_Photos/07.png)
 
-5. Now, the build process is ready. Simply run the following command:
+6. Now, the build process is ready. Simply run the following command:
 
    ```
    make ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
