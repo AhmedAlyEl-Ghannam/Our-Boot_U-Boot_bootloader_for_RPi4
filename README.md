@@ -48,7 +48,6 @@ This piece of info is a bit irrelevant for this project since the built was done
    ![](README_Photos/01.png)
    ![](README_Photos/02.png)
    ![](README_Photos/03.png)
-   ![](README_Photos/04.png)
    ![](README_Photos/05.png)
    ![](README_Photos/06.png)
    ![](README_Photos/07.png)
