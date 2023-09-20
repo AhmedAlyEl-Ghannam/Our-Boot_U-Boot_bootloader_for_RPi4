@@ -37,7 +37,7 @@ This piece of info is a bit irrelevant for this project since the built was done
 
    ```
    PATH=${HOME}/x-tools/aarch64-rpi4-linux-gnu/bin/:$PATH
-   make rpi_arm64_defconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
+   make rpi_4_defconfig ARCH=arm CROSS_COMPILE=aarch64-rpi4-linux-gnu-
    ```
 
 4. You can access U-Boot's `menuconfig` before building your bootloader to adjust settings on a deeper level. I left it as it is but changed the bootloader's command prompt to "Our-Boot" just for the memes.
